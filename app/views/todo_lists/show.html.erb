@@ -1,6 +1,8 @@
-<p id="notice"><%= notice %></p>
+<script>
+    $.notify("<%= notice %>", "success");
+</script>
 
-<h2 class="todo_list_title"><%= @todo_list.title %></h2>
+<h1 class="todo_list_title"><%= @todo_list.title %></h1>
 <p class="todo_list_sub_title"><%= @todo_list.description %></p>
 
 <div id="todo_items_wrapper">
@@ -11,8 +13,13 @@
 </div>
 
 <div class="links">
-	<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-	<%= link_to 'Delete', todo_list_path(@todo_list), method: :delete, data: { confirm: "Are you sure?" }
- %> |
-  <%= link_to 'Back', todo_lists_path %>
+    <%= link_to todo_lists_path, class: 'btn btn-primary btn-sm' do %>
+        <i class="glyphicon glyphicon-menu-left"></i> Back
+    <% end %>
+    <%= link_to edit_todo_list_path(@todo_list), class: 'btn btn-sm btn-warning' do %>
+        <i class="glyphicon glyphicon-edit"></i> Edit
+    <% end %>
+    <%= link_to todo_list_path(@todo_list), class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } do %>
+        <i class="glyphicon glyphicon-trash"></i> Delete
+    <% end %>
 </div>

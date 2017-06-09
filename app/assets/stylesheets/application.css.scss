@@ -11,6 +11,8 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require bootstrap
+ *= require leaflet
  *= require_self
  */
 
@@ -19,6 +21,13 @@
 
 * {
 	box-sizing: border-box;
+}
+.row {
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+}
+a {
+	text-decoration: none !important;
 }
 html {
   height: 100%;
@@ -32,6 +41,8 @@ body {
   background:      -o-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
   background:         linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
   font-family: 'Lato', sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .clearfix:before,
@@ -52,7 +63,6 @@ body {
 }
 
 .container {
-	width: 50%;
 	max-width: 750px;
 	background: $white_opaque;
 	margin: 3em auto 0 auto;
@@ -65,7 +75,7 @@ body {
 .todo_list_title {
 	text-align: center;
 	font-weight: 700;
-	font-size: 2.5rem;
+	font-size: 3em;
 	text-transform: uppercase;
 	color: white;
 	margin: 0;
@@ -82,7 +92,7 @@ body {
 .todo_list_sub_title {
 	margin: 0 0 3em 0;
 	text-align: center;
-	font-size: 0.9em;
+	font-size: 1.2em;
 	color: $dark;
 	font-weight: 100;
 }
@@ -168,7 +178,7 @@ body {
 	display: block;
 	margin: 1.5em auto 0 auto;
 	text-align: center;
-	font-size: 0.8em;
+	font-size: 1em;
 	color: white;
 	a {
 		color: white;

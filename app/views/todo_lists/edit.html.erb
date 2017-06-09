@@ -5,5 +5,7 @@
 </div>
 
 <div class="links">
-    <%= link_to 'Cancel', todo_lists_path %>
+    <%= link_to todo_lists_path, class: 'btn btn-danger btn-sm' do %>
+        <i class="glyphicon glyphicon-remove"></i> Cancel
+    <% end %>
 </div>

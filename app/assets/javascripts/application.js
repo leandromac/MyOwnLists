@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
+//= require angular
+//= require notifyjs
+//= require leaflet
 //= require_tree .

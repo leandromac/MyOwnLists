@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
 ruby '2.3.4'
 
+gem 'bundler', '>= 1.8.4'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-angular'
+  gem 'rails-assets-leaflet'
+  gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

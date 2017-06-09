@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Todo</title>
+  <title>MyOwnList</title>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
 </head>
 <body>
+
+<%= link_to todo_lists_path do %>
+<h2 class="text-center lead text-success"><%= image_tag 'logo_myownlist.png', width: '40' %> MyOwnList</h2>
+<% end %>
 
 <div class="container">
 	<%= yield %>
 </div>
+
+
+<footer class="text-center" style="padding: 20px 0px 20px 0px">
+    <a href="https://github.com/leandromac/mytodolist" target="_blank" class="btn btn-sm btn-default">GitHub <i class="glyphicon glyphicon-link"></i></a>
+</footer>
 
 </body>
 </html>
